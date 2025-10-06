@@ -11,51 +11,90 @@
       color: #0D142B;
     }
 
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: #0D142B;
-      padding: 12px 5%;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
+   nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0D142B;
+  padding: 12px 5%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  flex-wrap: wrap;
+  gap: 10px;
+}
 
-    .nav-brand {
-      color: #FAFFFA;
-      font-weight: bold;
-      font-size: 20px;
-      text-align: center;
-      flex: 1;
-    }
+.nav-brand {
+  color: #FAFFFA;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  flex: 1 1 100%;
+  order: 1;
+}
 
-    .nav-links {
-      display: flex;
-      gap: 20px;
-    }
+.nav-links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  order: 3;
+  width: 100%;
+}
 
-    .nav-links a {
-      color: #FAFFFA;
-      font-weight: 500;
-      padding: 6px 0;
-      transition: all 0.3s;
-    }
+.nav-links a {
+  color: #FAFFFA;
+  font-weight: 500;
+  padding: 6px 0;
+  transition: all 0.3s;
+  white-space: nowrap;
+}
 
-    .nav-links a:hover {
-      color: #FF5930;
-      border-bottom: 2px solid #FF5930;
-    }
+.nav-links a:hover {
+  color: #FF5930;
+  border-bottom: 2px solid #FF5930;
+}
 
-    .search-bar input {
-      padding: 8px 12px;
-      border-radius: 20px;
-      border: none;
-      outline: none;
-      width: 200px;
-      background: #FAFFFA;
-      color: #0D142B;
-    }
+.search-bar {
+  order: 2;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.search-bar input {
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  width: 100%;
+  background: #FAFFFA;
+  color: #0D142B;
+}
+
+@media (min-width: 769px) {
+  .nav-brand {
+    flex: 1;
+    order: 2;
+    text-align: center;
+  }
+
+  .nav-links {
+    justify-content: flex-start;
+    width: auto;
+    order: 1;
+  }
+
+  .search-bar {
+    order: 3;
+    width: auto;
+    margin: 0;
+  }
+
+  .search-bar input {
+    width: 200px;
+  }
+}
 
     .welcome-card {
     position: relative;
@@ -236,4 +275,5 @@
       .welcome-card {
         height: 150px;
       }
+
     }
