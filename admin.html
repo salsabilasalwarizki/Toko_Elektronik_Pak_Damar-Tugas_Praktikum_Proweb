@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Halaman Admin - Toko Elektronik Pak Damar</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #FAFFFA;
+      color: #0D142B;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #0D142B;
+      padding: 12px 5%;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-brand {
+      color: #FAFFFA;
+      font-weight: bold;
+      font-size: 20px;
+      text-align: center;
+      flex: 1;
+    }
+
+    .nav-links a {
+      color: #FAFFFA;
+      font-weight: 500;
+      text-decoration: none;
+      padding: 6px 0;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #FF5930;
+    }
+
+    .container {
+      padding: 30px 5% 40px;
+    }
+
+    .section-title {
+      margin: 30px 0 20px;
+      font-size: 22px;
+      color: #0D142B;
+      padding-left: 10px;
+      border-left: 4px solid #FF5930;
+    }
+
+    .tables-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .admin-table {
+      flex: 1;
+      min-width: 300px;
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .admin-table h3 {
+      background: #FF5930;
+      color: white;
+      padding: 14px;
+      text-align: center;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 12px 16px;
+      text-align: left;
+      border-bottom: 1px solid #eee;
+    }
+
+    th {
+      background: #f5f5f5;
+      color: #0D142B;
+    }
+
+    tr:hover {
+      background: #fdf6f8;
+    }
+
+    .btn-edit {
+      background: #ABFA54;
+      color: #0D142B;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.2s;
+    }
+
+    .btn-edit:hover {
+      background: #9AE84C;
+    }
+
+    .btn-delete {
+      background: #DC3545;
+      color: white;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.2s;
+    }
+
+    .btn-delete:hover {
+      background: #C82333;
+    }
+
+    @media (max-width: 768px) {
+      .tables-container {
+        flex-direction: column;
+      }
+      nav {
+        flex-direction: column;
+        gap: 12px;
+      }
+      .nav-brand {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-links" style="flex: 0 0 auto;">
+      <a href="dashboard.html">← Kembali ke Beranda</a>
+    </div>
+    <div class="nav-brand">
+      Toko Elektronik Pak Damar
+    </div>
+    <div style="flex: 0 0 auto;"></div>
+  </nav>
+
+  <div class="container">
+    <h2 class="section-title">Panel Admin</h2>
+    <div class="tables-container">
+      <div class="admin-table">
+        <h3>Daftar Admin</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Nama</th>
+              <th>Username</th>
+              <th>Role</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Damar</td>
+              <td>damar_owner</td>
+              <td>Owner</td>
+              <td>
+                <a href="#" class="btn-edit">Edit</a>
+                <a href="#" class="btn-delete">Delete</a>
+              </td>
+            </tr>
+            <tr>
+              <td>Sinta</td>
+              <td>sinta_admin</td>
+              <td>Admin</td>
+              <td>
+                <a href="#" class="btn-edit">Edit</a>
+                <a href="#" class="btn-delete">Delete</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="admin-table">
+        <h3>Data Client</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Nama</th>
+              <th>Email</th>
+              <th>Produk</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Budi</td>
+              <td>budi@email.com</td>
+              <td>Laptop Pro</td>
+              <td>
+                <a href="#" class="btn-edit">Edit</a>
+                <a href="#" class="btn-delete">Delete</a>
+              </td>
+            </tr>
+            <tr>
+              <td>Ani</td>
+              <td>ani@email.com</td>
+              <td>Smartphone X1</td>
+              <td>
+                <a href="#" class="btn-edit">Edit</a>
+                <a href="#" class="btn-delete">Delete</a>
+              </td>
+            </tr>
+            <tr>
+              <td>Rudi</td>
+              <td>rudi@email.com</td>
+              <td>Kulkas 2 Pintu</td>
+              <td>
+                <a href="#" class="btn-edit">Edit</a>
+                <a href="#" class="btn-delete">Delete</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

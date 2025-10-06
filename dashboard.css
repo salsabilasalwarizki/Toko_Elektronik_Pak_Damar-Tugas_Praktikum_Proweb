@@ -1,0 +1,239 @@
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #FAFFFA;
+      color: #0D142B;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #0D142B;
+      padding: 12px 5%;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-brand {
+      color: #FAFFFA;
+      font-weight: bold;
+      font-size: 20px;
+      text-align: center;
+      flex: 1;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      color: #FAFFFA;
+      font-weight: 500;
+      padding: 6px 0;
+      transition: all 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #FF5930;
+      border-bottom: 2px solid #FF5930;
+    }
+
+    .search-bar input {
+      padding: 8px 12px;
+      border-radius: 20px;
+      border: none;
+      outline: none;
+      width: 200px;
+      background: #FAFFFA;
+      color: #0D142B;
+    }
+
+    .welcome-card {
+    position: relative;
+    height: 220px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 20px 5% 30px;
+    background-color: #0D142B ;
+    background-size: cover;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .welcome-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    color: white;
+    padding: 24px 24px 16px;
+    text-align: left;
+    }
+
+    .welcome-overlay h2 {
+    font-size: 28px;
+    margin: 0 0 8px;
+    font-weight: bold;
+    }
+
+    .welcome-overlay p {
+    font-size: 16px;
+    opacity: 0.9;
+    margin: 0;
+    }
+    
+    /* Konten */
+    .container {
+      padding: 20px 5% 40px;
+    }
+
+    .section-title {
+      margin: 30px 0 20px;
+      font-size: 22px;
+      color: #0D142B;
+      padding-left: 10px;
+      border-left: 4px solid #FF5930;
+    }
+
+    .collections {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+
+    .collection-card {
+      position: relative;
+      height: 200px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+
+    .collection-card:hover {
+      transform: scale(1.02);
+    }
+
+    .collection-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      background: #eee;
+    }
+
+    .collection-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(transparent, rgba(0,0,0,0.7));
+      color: white;
+      padding: 16px;
+      text-align: left;
+    }
+
+    .collection-overlay h3 {
+      margin: 0 0 4px;
+      font-size: 18px;
+    }
+
+    .collection-overlay p {
+      font-size: 12px;
+      opacity: 0.8;
+    }
+
+    .featured-products {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 24px;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .product-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      background: #eee;
+    }
+
+    .product-info {
+      padding: 16px;
+    }
+
+    .product-info h3 {
+      margin: 8px 0 4px;
+      color: #0D142B;
+      font-size: 16px;
+    }
+
+    .product-info .price {
+      font-weight: bold;
+      color: #ABFA54;
+      font-size: 16px;
+    }
+
+    .product-info .rating {
+      color: #FF5930;
+      font-size: 12px;
+      margin-top: 4px;
+    }
+
+    .iklan {
+      background: #5C6B3D;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      margin-top: 40px;
+      border: 2px dashed #ABFA54;
+    }
+
+    .iklan h3 {
+      color: #FAFFFA;
+    }
+
+    .iklan p {
+      color: #FAFFFA;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 12px;
+      }
+      .nav-brand {
+        font-size: 18px;
+      }
+      .search-bar input {
+        width: 100%;
+      }
+      .collections {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      }
+      .featured-products {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      }
+      .welcome-card {
+        height: 150px;
+      }
+    }
